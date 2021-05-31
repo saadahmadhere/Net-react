@@ -1,11 +1,9 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=KoHo:bold;wght@200&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
 
 
 :root{
-  --main-color: #FEE3B6;
-  --heading-color:#3a3636;
-  --border-color: #FFC569;
+  --heading-color:#413a3a;
   --heading-font:'Nunito', sans-serif;
 }
 
@@ -16,12 +14,11 @@
 }
 
 .navbar{
-  /* background-color: var(--main-color); */
   padding: 20px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  /* max-width: 600px; */
+  max-width: 600px;
 }
 
 .navbar h1{
@@ -55,6 +52,35 @@
   max-width: 600px;
   margin: 40px auto;
   
+}
+
+/* blog preview*/
+.blog-preview{
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.blog-preview h2{
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--heading-color);
+}
+
+.blog-preview:hover{
+  box-shadow: 2px 2px 5px rgba(150, 147, 147, 0.863);
+}
+
+.blog-preview:hover hr{
+  visibility: hidden;
+}
+
+.home hr{
+    /* margin-block-start: 3%; */
+    border: dotted rgba(150, 147, 147, 0.863) 8px;
+    border-bottom: none;
+    width: 10%;
+    margin: 20px auto;
+ 
 }
 
 
