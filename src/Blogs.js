@@ -1,6 +1,7 @@
 const Blogs = (props) =>{
     return(
         <div className="blog-page">
+             <h1>{props.title}</h1>
              {props.blogs.map((blog) =>(
             <div>
                <div className="blog-preview">
