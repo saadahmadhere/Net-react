@@ -70,13 +70,10 @@
   box-shadow: 2px 2px 5px rgba(150, 147, 147, 0.863);
 }
 
-.blog-preview:hover hr{
-  visibility: hidden;
-}
 
 .home hr{
     /* margin-block-start: 3%; */
-    border: dotted rgba(150, 147, 147, 0.863) 8px;
+    border: dotted rgba(240, 236, 236, 0.863) 8px;
     border-bottom: none;
     width: 10%;
     margin: 20px auto;
