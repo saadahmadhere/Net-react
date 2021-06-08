@@ -3,31 +3,28 @@ import Blogs from './Blogs'
 
 const Home = () =>{
 
-    const [blogs,setBlogs] = useState([
-        { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
-        { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
-        { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
-    ]
-    )
-
-    const [names,setNames] = useState('mario');
-
-    const deleteHandler =(id) =>{
-        const newBlogs = blogs.filter((blog)=>(id !== blog.id))
-        return(
-            setBlogs(newBlogs)
-        );
-    }
+    const [blogs,setBlogs] = useState(null)
+    const[isPending, setIsPending] = useState(true);
 
     useEffect(()=>{
-        console.log("Re-rendered")
-    },[names])
+      setTimeout(()=>{
+        fetch("http://localhost:8000/blogs/")
+        .then(respose =>{
+            return respose.json();
+        }).then((data) =>{
+            // console.log(data)
+            setBlogs(data)
+            setIsPending(false)
+        }).catch((err)=>{
+            console.log(err)
+        })
+      },1000)   //the timeout is set only for understanding concept. Don't forget to reemove it.
+    },[])
 
     return(
         <div className="home">
-          <Blogs blogs ={blogs} title = "All blogs" deleteHandler = {deleteHandler}/>
-            <button onClick = {()=>{setNames('Luigi')}}>check</button>
-            <p>{names}</p>
+        {(isPending) && <h1>Loading...</h1> }
+        {blogs &&  <Blogs blogs ={blogs} title = "All blogs" />}
         </div>
     );
 }
