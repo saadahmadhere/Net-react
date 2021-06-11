@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Baloo+Tammudu+2&display=swap');
 
 :root{
   --heading-color:#413a3a;
   --heading-font:'Nunito', sans-serif;
+  --text-font: 'Baloo Tammudu 2', cursive;
 }
 
 *{
@@ -85,3 +86,20 @@
  
 }
 
+/* blog-page */
+
+.blog-details h2{
+  font-size: 30px;
+  margin: 20px 0 2px -3px;
+}
+
+.blog-details p{
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.blog-details div{
+  font-size: 20px;
+  font-family: var(--text-font);
+  line-height: 1.6
+}
