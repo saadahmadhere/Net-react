@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const CreateBlog = () => {
 
@@ -6,6 +7,7 @@ const CreateBlog = () => {
     const[body, setBody] = useState('')
     const[author, setAuthor] = useState('mario')
     const[isPending, setIsPending] = useState(false)
+    const history = useHistory();
 
     const handleSubmit = (event) =>{
         event.preventDefault();
@@ -18,6 +20,7 @@ const CreateBlog = () => {
             body: JSON.stringify(blog)
         }).then(()=>{
             setIsPending(false)
+            history.push('/')
         })
     }
     return(
@@ -41,8 +44,8 @@ const CreateBlog = () => {
                 value = {author}
                 onChange = {(event)=> setAuthor(event.target.author)}
                 >
-                    <option value="mario">Mario</option>
-                    <option value="luigi">Luigi</option>
+                    <option value="mario" >Mario</option>
+                    <option value="luigi" selected>Luigi</option>
                 </select>
                 {!isPending && <button>Add blog</button>}
                 {isPending && <button disabled>Adding blog...</button>}

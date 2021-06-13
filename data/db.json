@@ -13,15 +13,22 @@
       "id": 2
     },
     {
-      "title": "new blog",
-      "body": "this is by saad",
+      "title": "kfjdk",
+      "body": "kdid",
       "author": "mario",
       "id": 3
     },
     {
-      "title": "logg",
-      "body": "dfjkdfjd",
+      "title": "fdjfi",
+      "body": "godo",
+      "author": "mario",
       "id": 4
+    },
+    {
+      "title": "this is new blog",
+      "body": "after pushing or adding history",
+      "author": "mario",
+      "id": 5
     }
   ]
 }
