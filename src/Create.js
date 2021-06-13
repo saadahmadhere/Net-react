@@ -45,7 +45,7 @@ const CreateBlog = () => {
                 onChange = {(event)=> setAuthor(event.target.author)}
                 >
                     <option value="mario" >Mario</option>
-                    <option value="luigi" selected>Luigi</option>
+                    <option value="luigi" >Luigi</option>
                 </select>
                 {!isPending && <button>Add blog</button>}
                 {isPending && <button disabled>Adding blog...</button>}
