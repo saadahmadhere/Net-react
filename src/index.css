@@ -165,3 +165,13 @@
   background-color: rgba(221, 218, 218, 0.863);
 }
 
+/*Error*/
+
+.error{
+  display: grid;
+  place-items: center;
+}
+.error h1{
+  font-size: 80px;
+  
+}
